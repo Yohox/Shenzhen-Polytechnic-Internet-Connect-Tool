@@ -1,7 +1,9 @@
+var studentName = "" //学号
+var studentPassword = "" //密码 默认身份证后8位
 var algorithm = require("./a41");
 var http = require("http");
 var querystring = require("querystring");
-var data = algorithm.ee("16240457","04133210");
+var data = algorithm.ee(studentName,studentPassword);
 var content = querystring.stringify(data);
 var options = {
     hostname:'10.1.255.90',
